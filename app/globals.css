@@ -9,11 +9,11 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
 
 /* ============================================================
-   Design Tokens — STEP 2
-   All 29 custom properties: --color-bg through --space-8
+   Design Tokens
+   All custom properties: --color-bg through --page-padding-bottom-desktop
    ============================================================ */
 :root {
-  /* --- Color palette (6) --- */
+  /* --- Color palette --- */
   --color-bg: #050508;
   --color-surface: #0A0A0A;
   --color-text: #FFFFFF;
@@ -21,13 +21,13 @@
   --color-accent: #16A34A;          /* reserved for focus outlines only */
   --color-focus-ring: rgba(22, 163, 74, 0.14);
 
-  /* --- Font families (3) --- */
+  /* --- Font families --- */
   --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, sans-serif;
   --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, monospace;
 
-  /* --- Type ramp (7) --- */
+  /* --- Type ramp --- */
   --type-h1-size: 48px;
   --type-h1-line-height: 56px;
   --type-h1-weight: 700;
@@ -37,7 +37,7 @@
   --type-body-line-height: 24px;
   --type-body-weight: 400;
 
-  /* --- Spacing scale — base unit 8px (9) --- */
+  /* --- Spacing scale (base unit 8px) --- */
   --space-0: 4px;   /* micro */
   --space-1: 8px;   /* base */
   --space-2: 16px;
@@ -48,7 +48,7 @@
   --space-7: 64px;
   --space-8: 96px;
 
-  /* --- Layout tokens (4) --- */
+  /* --- Layout tokens --- */
   --container-max-width: 860px;
   --page-padding-x: 24px;               /* 1.5rem */
   --page-padding-top-desktop: 96px;     /* 6rem */
@@ -85,24 +85,52 @@ body {
 }
 
 /* ============================================================
+   Page wrapper
+   Task 5: exact spec properties on the base class
+   ============================================================ */
+.page--wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: var(--page-padding-top-desktop);
+  padding-bottom: var(--page-padding-bottom-desktop);
+}
+
+/* Scale padding down on smaller screens */
+@media (max-width: 767px) {
+  .page--wrapper {
+    padding-top: var(--space-6);    /* 48px */
+    padding-bottom: var(--space-7); /* 64px */
+  }
+}
+
+/* ============================================================
    Container
+   Task 6: .container--auditgate with max-width, width 100%,
+   padding-left/right via --page-padding-x, margin auto
    ============================================================ */
 .container--auditgate {
   max-width: var(--container-max-width);
+  width: 100%;
   padding-left: var(--page-padding-x);
   padding-right: var(--page-padding-x);
-  padding-top: var(--space-6);          /* 48px mobile */
-  padding-bottom: var(--space-7);       /* 64px mobile */
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+  margin: auto;
 }
 
-@media (min-width: 768px) {
-  .container--auditgate {
-    padding-top: var(--page-padding-top-desktop);
-    padding-bottom: var(--page-padding-bottom-desktop);
-  }
+/* ============================================================
+   Gate heading
+   Task 7: .gate-heading — display font, h1 type ramp, centered
+   ============================================================ */
+.gate-heading {
+  font-family: var(--font-display);
+  font-weight: var(--type-h1-weight);
+  font-size: var(--type-h1-size);
+  line-height: var(--type-h1-line-height);
+  letter-spacing: var(--type-h1-letter-spacing);
+  color: var(--color-text);
+  text-align: center;
+  margin: 0;
 }
 
 /* ============================================================
@@ -213,10 +241,4 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
-}
-
-/* Focus ring — reserved for any focusable elements; accent used for focus only */
-:focus-visible {
-  outline: 2px solid var(--color-accent, #16A34A);
-  outline-offset: 2px;
 }
