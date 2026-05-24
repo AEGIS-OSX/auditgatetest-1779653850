@@ -11,23 +11,12 @@ export const metadata: Metadata = {
     description:
       "Single-purpose build gate page. Confirms a successful build by rendering the exact H1 'AEGIS Gate Test' and an accessibility validation string for CI checks.",
     type: "website",
-    images: [
-      {
-        url: "https://zkvkbpxrxnfynqqeytke.supabase.co/storage/v1/object/public/marketing-assets/auditgatetest-1779653850/cleo/1779654557932-hero.png",
-        width: 1200,
-        height: 630,
-        alt: "AEGIS Gate Test — Build validation",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "AEGIS Gate Test — Build validation",
     description:
       "Single-purpose build gate page. Confirms a successful build by rendering the exact H1 'AEGIS Gate Test' and an accessibility validation string for CI checks.",
-    images: [
-      "https://zkvkbpxrxnfynqqeytke.supabase.co/storage/v1/object/public/marketing-assets/auditgatetest-1779653850/cleo/1779654557932-hero.png",
-    ],
   },
   metadataBase: new URL("https://auditgatetest-1779653850.vercel.app"),
 };
