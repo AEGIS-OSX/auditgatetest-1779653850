@@ -12,7 +12,7 @@
    Design Tokens
    ============================================================ */
 :root {
-  /* --- Color palette --- */
+  /* --- Color palette (6) --- */
   --color-bg: #050508;
   --color-surface: #0A0A0A;
   --color-text: #FFFFFF;
@@ -20,13 +20,13 @@
   --color-accent: #16A34A;          /* reserved for focus outlines only */
   --color-focus-ring: rgba(22, 163, 74, 0.14);
 
-  /* --- Font families --- */
+  /* --- Font families (3) --- */
   --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, sans-serif;
   --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, monospace;
 
-  /* --- Type ramp --- */
+  /* --- Type ramp (7) --- */
   --type-h1-size: 48px;
   --type-h1-line-height: 56px;
   --type-h1-weight: 700;
@@ -36,18 +36,29 @@
   --type-body-line-height: 24px;
   --type-body-weight: 400;
 
-  /* --- Spacing scale (base unit 8px) --- */
-  --s-0: 4px;   /* micro */
-  --s-1: 8px;   /* base */
-  --s-2: 16px;
-  --s-3: 24px;
-  --s-4: 32px;
-  --s-5: 40px;
-  --s-6: 48px;
-  --s-7: 64px;
-  --s-8: 96px;
+  /* --- Spacing scale — base unit 8px (9) --- */
+  --space-0: 4px;   /* micro */
+  --space-1: 8px;   /* base */
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
 
-  /* --- Breakpoints --- */
+  /* --- Spacing aliases (legacy --s-* kept for backward compat) --- */
+  --s-0: var(--space-0);
+  --s-1: var(--space-1);
+  --s-2: var(--space-2);
+  --s-3: var(--space-3);
+  --s-4: var(--space-4);
+  --s-5: var(--space-5);
+  --s-6: var(--space-6);
+  --s-7: var(--space-7);
+  --s-8: var(--space-8);
+
+  /* --- Breakpoints (4) --- */
   --bp-sm: 640px;
   --bp-md: 768px;
   --bp-lg: 1024px;
@@ -95,8 +106,8 @@ body {
   max-width: var(--container-max-width);
   padding-left: var(--page-padding-x);
   padding-right: var(--page-padding-x);
-  padding-top: var(--s-6);          /* 48px mobile */
-  padding-bottom: var(--s-7);       /* 64px mobile */
+  padding-top: var(--space-6);          /* 48px mobile */
+  padding-bottom: var(--space-7);       /* 64px mobile */
   margin-left: auto;
   margin-right: auto;
   width: 100%;
