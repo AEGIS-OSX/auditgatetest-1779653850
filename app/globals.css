@@ -9,7 +9,8 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
 
 /* ============================================================
-   Design Tokens
+   Design Tokens — STEP 2
+   All 29 custom properties: --color-bg through --space-8
    ============================================================ */
 :root {
   /* --- Color palette (6) --- */
@@ -47,27 +48,10 @@
   --space-7: 64px;
   --space-8: 96px;
 
-  /* --- Spacing aliases (legacy --s-* kept for backward compat) --- */
-  --s-0: var(--space-0);
-  --s-1: var(--space-1);
-  --s-2: var(--space-2);
-  --s-3: var(--space-3);
-  --s-4: var(--space-4);
-  --s-5: var(--space-5);
-  --s-6: var(--space-6);
-  --s-7: var(--space-7);
-  --s-8: var(--space-8);
-
-  /* --- Breakpoints (4) --- */
-  --bp-sm: 640px;
-  --bp-md: 768px;
-  --bp-lg: 1024px;
-  --bp-xl: 1280px;
-
-  /* --- Layout tokens --- */
+  /* --- Layout tokens (4) --- */
   --container-max-width: 860px;
-  --page-padding-x: 24px;           /* 1.5rem */
-  --page-padding-top-desktop: 96px; /* 6rem */
+  --page-padding-x: 24px;               /* 1.5rem */
+  --page-padding-top-desktop: 96px;     /* 6rem */
   --page-padding-bottom-desktop: 128px; /* 8rem */
 }
 
