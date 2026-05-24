@@ -85,24 +85,34 @@ body {
 }
 
 /* ============================================================
+   Page wrapper
+   ============================================================ */
+.page--wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: var(--space-6);          /* 48px mobile */
+  padding-bottom: var(--space-7);       /* 64px mobile */
+}
+
+@media (min-width: 768px) {
+  .page--wrapper {
+    padding-top: var(--page-padding-top-desktop);
+    padding-bottom: var(--page-padding-bottom-desktop);
+  }
+}
+
+/* ============================================================
    Container
    ============================================================ */
 .container--auditgate {
   max-width: var(--container-max-width);
   padding-left: var(--page-padding-x);
   padding-right: var(--page-padding-x);
-  padding-top: var(--space-6);          /* 48px mobile */
-  padding-bottom: var(--space-7);       /* 64px mobile */
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-}
-
-@media (min-width: 768px) {
-  .container--auditgate {
-    padding-top: var(--page-padding-top-desktop);
-    padding-bottom: var(--page-padding-bottom-desktop);
-  }
 }
 
 /* ============================================================
