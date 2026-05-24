@@ -18,7 +18,7 @@ export default function Home() {
       className="page--wrapper"
     >
       <div className="container--auditgate">
-        <h1 className="gate-heading">AEGIS Gate Test</h1>
+        <h1 className="auditgate-h1">AEGIS Gate Test</h1>
         <p className="sr-only">Build validated: AEGIS gate test successful.</p>
       </div>
     </main>
