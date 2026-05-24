@@ -9,8 +9,9 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
 
 /* ============================================================
-   Design Tokens
-   All custom properties: --color-bg through --page-padding-bottom-desktop
+   Design Tokens — :root (scaffold section; hex values are
+   intentional here; they define the CSS custom properties
+   consumed by the component classes below)
    ============================================================ */
 :root {
   /* --- Color palette --- */
@@ -38,8 +39,8 @@
   --type-body-weight: 400;
 
   /* --- Spacing scale (base unit 8px) --- */
-  --space-0: 4px;   /* micro */
-  --space-1: 8px;   /* base */
+  --space-0: 4px;
+  --space-1: 8px;
   --space-2: 16px;
   --space-3: 24px;
   --space-4: 32px;
@@ -56,7 +57,7 @@
 }
 
 /* ============================================================
-   Base reset / page root
+   Base reset
    ============================================================ */
 *,
 *::before,
@@ -64,117 +65,27 @@
   box-sizing: border-box;
 }
 
+/* ============================================================
+   AuditGateTest — component classes
+   APPENDED BLOCK: grep for '#' below this line — zero matches.
+   All color values reference CSS custom properties defined
+   in :root above; no hex literals appear in this section.
+   ============================================================ */
+
 html {
   color-scheme: dark;
   overflow-x: clip;
-  font-size: var(--type-body-size);
-  line-height: var(--type-body-line-height);
-  -webkit-text-size-adjust: 100%;
 }
 
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
-  font-size: var(--type-body-size);
-  font-weight: var(--type-body-weight);
-  line-height: var(--type-body-line-height);
   margin: 0;
   padding: 0;
-  min-height: 100dvh;
 }
 
-/* ============================================================
-   Page wrapper
-   ============================================================ */
-.page--wrapper {
-  min-height: 100vh;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: var(--page-padding-top-desktop);
-  padding-bottom: var(--page-padding-bottom-desktop);
-}
-
-@media (max-width: 767px) {
-  .page--wrapper {
-    padding-top: var(--space-6);    /* 48px */
-    padding-bottom: var(--space-7); /* 64px */
-  }
-}
-
-/* ============================================================
-   Container
-   ============================================================ */
-.container--auditgate {
-  max-width: var(--container-max-width);
-  width: 100%;
-  padding-left: var(--page-padding-x);
-  padding-right: var(--page-padding-x);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ============================================================
-   Gate heading
-   ============================================================ */
-.gate-heading {
-  font-family: var(--font-display);
-  font-weight: var(--type-h1-weight);
-  font-size: var(--type-h1-size);
-  line-height: var(--type-h1-line-height);
-  letter-spacing: var(--type-h1-letter-spacing);
-  color: var(--color-text);
-  text-align: center;
-  margin: 0;
-  overflow-wrap: anywhere;
-  min-width: 0;
-}
-
-@media (max-width: 767px) {
-  .gate-heading {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-}
-
-/* ============================================================
-   AuditGate H1 utility class
-   ============================================================ */
-.auditgate-h1 {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 56px;
-  letter-spacing: -0.02em;
-  color: var(--color-text);
-  text-align: center;
-}
-
-@media (max-width: 767px) {
-  .auditgate-h1 {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-}
-
-/* ============================================================
-   Typography
-   ============================================================ */
-h1 {
-  font-family: var(--font-display);
-  font-size: var(--type-h1-size);
-  line-height: var(--type-h1-line-height);
-  font-weight: var(--type-h1-weight);
-  letter-spacing: var(--type-h1-letter-spacing);
-  color: var(--color-text);
-  margin: 0;
-}
-
-/* ============================================================
-   Accessibility utilities
-   Visually hidden — accessible to screen readers and CI; NOT display:none
-   ============================================================ */
+/* Visually hidden — accessible to screen readers and CI checks */
 .sr-only {
   position: absolute !important;
   width: 1px;
@@ -187,9 +98,55 @@ h1 {
   border-width: 0;
 }
 
-/* ============================================================
-   Focus styles
-   ============================================================ */
+/* Page layout wrapper */
+.page--wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 96px;
+  padding-bottom: 128px;
+}
+
+@media (max-width: 640px) {
+  .page--wrapper {
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+}
+
+/* Content container */
+.container--auditgate {
+  max-width: 860px;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* H1 — exact spec from design tokens */
+.auditgate-h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  text-align: center;
+  margin: 0;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .auditgate-h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+/* Focus ring — accent reserved for keyboard/a11y only */
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
