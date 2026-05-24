@@ -107,6 +107,8 @@ body {
 
 /* ============================================================
    Container
+   Task 6: .container--auditgate with max-width, width 100%,
+   padding-left/right via --page-padding-x, margin auto
    ============================================================ */
 .container--auditgate {
   max-width: var(--container-max-width);
