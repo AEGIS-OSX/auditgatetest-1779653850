@@ -66,6 +66,7 @@
 
 html {
   color-scheme: dark;
+  overflow-x: clip;
   font-size: var(--type-body-size);
   line-height: var(--type-body-line-height);
   -webkit-text-size-adjust: 100%;
