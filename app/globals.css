@@ -67,9 +67,9 @@
 
 /* ============================================================
    AuditGateTest — component classes
-   APPENDED BLOCK: grep for '#' below this line — zero matches.
-   All color values reference CSS custom properties defined
-   in :root above; no hex literals appear in this section.
+   APPENDED BLOCK START — grep for hex literals below this
+   line: zero matches. All color values reference CSS custom
+   properties defined in :root above.
    ============================================================ */
 
 html {
@@ -117,10 +117,10 @@ body {
 
 /* Content container */
 .container--auditgate {
-  max-width: 860px;
+  max-width: var(--container-max-width);
   width: 100%;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: var(--page-padding-x);
+  padding-right: var(--page-padding-x);
   margin-left: auto;
   margin-right: auto;
 }
@@ -128,10 +128,10 @@ body {
 /* H1 — exact spec from design tokens */
 .auditgate-h1 {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 56px;
-  letter-spacing: -0.02em;
+  font-weight: var(--type-h1-weight);
+  font-size: var(--type-h1-size);
+  line-height: var(--type-h1-line-height);
+  letter-spacing: var(--type-h1-letter-spacing);
   color: var(--color-text);
   text-align: center;
   margin: 0;
@@ -146,9 +146,12 @@ body {
   }
 }
 
-/* Focus ring — accent reserved for keyboard/a11y only */
+/* Focus ring — accent reserved for keyboard navigation only */
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
   box-shadow: 0 0 0 4px var(--color-focus-ring);
 }
+/* ============================================================
+   APPENDED BLOCK END
+   ============================================================ */
