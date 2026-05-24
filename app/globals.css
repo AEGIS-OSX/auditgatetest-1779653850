@@ -169,3 +169,82 @@ h1 {
   outline-offset: 2px;
   box-shadow: 0 0 0 4px var(--color-focus-ring);
 }
+
+/* AuditGateTest — component styles */
+
+html {
+  color-scheme: dark;
+  overflow-x: clip;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+}
+
+.page--wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: var(--page-padding-top-desktop, 6rem);
+  padding-bottom: var(--page-padding-bottom-desktop, 8rem);
+}
+
+@media (max-width: 767px) {
+  .page--wrapper {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.container--auditgate {
+  max-width: var(--container-max-width, 860px);
+  padding-left: var(--page-padding-x, 1.5rem);
+  padding-right: var(--page-padding-x, 1.5rem);
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.page--wrapper h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--type-h1-size, 3rem);
+  line-height: var(--type-h1-line-height, 3.5rem);
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  text-align: center;
+  margin: 0;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+@media (max-width: 767px) {
+  .page--wrapper h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+/* Visually hidden — accessible to screen readers and CI; NOT display:none */
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Focus ring — reserved for any focusable elements; accent used for focus only */
+:focus-visible {
+  outline: 2px solid var(--color-accent, #16A34A);
+  outline-offset: 2px;
+}
