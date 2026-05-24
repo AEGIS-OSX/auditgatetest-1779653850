@@ -119,6 +119,21 @@ body {
 }
 
 /* ============================================================
+   Gate heading
+   Task 7: .gate-heading — display font, h1 type ramp, centered
+   ============================================================ */
+.gate-heading {
+  font-family: var(--font-display);
+  font-weight: var(--type-h1-weight);
+  font-size: var(--type-h1-size);
+  line-height: var(--type-h1-line-height);
+  letter-spacing: var(--type-h1-letter-spacing);
+  color: var(--color-text);
+  text-align: center;
+  margin: 0;
+}
+
+/* ============================================================
    Typography
    ============================================================ */
 h1 {
