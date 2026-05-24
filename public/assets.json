@@ -1,31 +1,31 @@
 {
   "hero": {
-    "url": "",
-    "alt": "",
+    "url": "https://zkvkbpxrxnfynqqeytke.supabase.co/storage/v1/object/public/marketing-assets/auditgatetest-1779653850/cleo/1779654557932-hero.png",
+    "alt": "A restrained low-angle photograph of an engraved metal plaque reading 'AEGIS Gate Test' against a deep #050508 background. The image matches the PRD's minimal, ceremonial mood and clear white typograp",
     "width": 1920,
     "height": 1080
   },
   "feature_1": {
-    "url": "",
-    "alt": "",
+    "url": "https://zkvkbpxrxnfynqqeytke.supabase.co/storage/v1/object/public/marketing-assets/auditgatetest-1779653850/cleo/1779654655953-feature_1.png",
+    "alt": "An overhead plan-style image of a single recessed indicator window on a matte panel. The composition and palette prioritize clarity and contrast while remaining minimal and ceremonial.",
     "width": 800,
     "height": 600
   },
   "feature_2": {
-    "url": "",
-    "alt": "",
+    "url": "https://zkvkbpxrxnfynqqeytke.supabase.co/storage/v1/object/public/marketing-assets/auditgatetest-1779653850/cleo/1779654762028-feature_2.png",
+    "alt": "Close-up of an embossed ceramic plaque bearing the heading text. The tactile texture and white-on-black contrast support the page's ceremonial, authoritative tone while staying minimal.",
     "width": 800,
     "height": 600
   },
   "feature_3": {
-    "url": "",
-    "alt": "",
+    "url": "https://zkvkbpxrxnfynqqeytke.supabase.co/storage/v1/object/public/marketing-assets/auditgatetest-1779653850/cleo/1779654873426-feature_3.png",
+    "alt": "A focused low-angle study of a server-rack label plate engraved with the exact heading. The image reinforces the instrument-panel, no-ornament aesthetic and high contrast required by the PRD.",
     "width": 800,
     "height": 600
   },
   "social_proof": {
-    "url": "",
-    "alt": "",
+    "url": "https://zkvkbpxrxnfynqqeytke.supabase.co/storage/v1/object/public/marketing-assets/auditgatetest-1779653850/cleo/1779655000424-social_proof.png",
+    "alt": "A restrained overhead image showing a tone-on-tone instrument grid with tiny white micro-labels. The image provides a quiet texture that can sit behind short copy while preserving contrast and the cer",
     "width": 1200,
     "height": 800
   }
